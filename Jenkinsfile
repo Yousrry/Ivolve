@@ -12,7 +12,7 @@ pipeline {
         
         stage('Repo Checkout') {
             steps {
-			checkout scm
+			echo "$GIT_BRANCH"
             }
         }
 
@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                 	dir('App') {
-                		runUnitTests
+                		UnitTest
             		}
         	}
     	    }
