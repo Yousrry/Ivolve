@@ -20,7 +20,7 @@ pipeline {
             steps {
                 script {
                 	dir('App') {
-                		UnitTest
+                		UnitTest()
             		}
         	}
     	    }
@@ -31,7 +31,7 @@ pipeline {
             steps {
                 script {
                     	dir('App') {
-                    		SonarAnalysis
+                    		SonarAnalysis()
                     	}
                 }
             }
