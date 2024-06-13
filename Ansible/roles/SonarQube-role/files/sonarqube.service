@@ -3,12 +3,11 @@ Description=SonarQube service
 After=syslog.target network.target
 
 [Service]
-Type=simple
-Environment=JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+Type=forking
 ExecStart=/opt/sonarqube-9.4.0.54424/bin/linux-x86-64/sonar.sh start
 ExecStop=/opt/sonarqube-9.4.0.54424/bin/linux-x86-64/sonar.sh stop
-User=ubuntu
-Group=ubuntu
+User=sonar
+Group=sonar
 Restart=always
 LimitNOFILE=65536
 

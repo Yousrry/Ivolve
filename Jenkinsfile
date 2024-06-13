@@ -4,7 +4,7 @@ pipeline {
     environment {
         dockerHubCredentialsID	    = 'DockerHub'  		    			// DockerHub credentials ID.
         imageName   		    = 'engyousry/spring-app'     			// DockerHub repo/image name.
-	openshiftCredentialsID	    = 'openshiftCredentialsID'		    		// service account token credentials ID
+	openshiftCredentialsID	    = 'Openshift'		    		        // service account token credentials ID
 	openshiftClusterURL	    = 'https://api.ocp-training.ivolve-test.com:6443'   // OpenShift Cluser URL.
         openshiftProject 	    = 'mohamedyousry'			     		// OpenShift project name.
         
@@ -79,4 +79,5 @@ pipeline {
             echo "${JOB_NAME}-${BUILD_NUMBER} pipeline failed"
         }
     }
+}
 }
