@@ -63,7 +63,7 @@ pipeline {
         stage('Deploy on OpenShift Cluster') {
             steps {
                 script { 
-                	dir('OpenShift') {
+                	dir('OC') {
 				deployOnOpenShift("${openshiftCredentialsID}", "${openshiftClusterURL}", "${openshiftProject}", "${imageName}")
                     	}
                 }
