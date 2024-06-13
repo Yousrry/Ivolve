@@ -1,0 +1,53 @@
+---
+# tasks file for SonarQube-role
+- name: Download SonarQube
+  get_url:
+    url: "https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-9.4.0.54424.zip"
+    dest: "/opt/sonarqube.zip"
+
+- name: Ensure required dependencies are installed
+  apt:
+    name: unzip
+    state: present
+    
+- name: Extract SonarQube
+  unarchive:
+    src: "/opt/sonarqube.zip"
+    dest: "/opt/"
+    remote_src: yes
+
+
+- name: Set permissions
+  file:
+    path: "/opt/sonarqube-9.4.0.54424"
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    recurse: yes
+
+
+- name: Copy SonarQube configuration file
+  template:
+    src: sonar.properties.j2
+    dest: /opt/sonarqube-9.4.0.54424/conf/sonar.properties
+
+
+- name: Create SonarQube systemd service
+  copy:
+    src: sonarqube.service
+    dest: /etc/systemd/system/sonarqube.service
+    owner: root
+    group: root
+
+
+- name: Reload systemd
+  systemd:
+    daemon_reload: yes
+
+- name: Enable and start SonarQube service
+  systemd:
+    name: sonarqube
+    enabled: yes
+    state: started
+
+

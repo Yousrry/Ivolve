@@ -1,0 +1,15 @@
+---
+- name: Installing Devops tools
+  hosts: all
+  remote_user: ubuntu 
+  become: true
+  roles:
+
+    - role: '/home/yousry/Desktop/Final-Project/Ansible/roles/jenkins_role'
+  
+    - role: '/home/yousry/Desktop/Final-Project/Ansible/roles/Docker_role'
+
+    - role: '/home/yousry/Desktop/Final-Project/Ansible/roles/OC-role'  
+    
+    - role: '/home/yousry/Desktop/Final-Project/Ansible/roles/SonarQube-role'
+

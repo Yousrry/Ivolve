@@ -1,0 +1,47 @@
+---
+# tasks file for jenkins_role
+
+
+
+- name: Remove any existing Jenkins repository configuration
+  file:
+    path: /etc/apt/sources.list.d/jenkins.list
+    state: absent
+  ignore_errors: yes
+
+- name: Clean the local repository and package cache
+  command: apt-get clean
+ 
+- name: Install Java
+  apt:
+    name: openjdk-17-jdk
+    state: present
+
+- name: Ensure the jenkins apt repository key is installed
+  apt_key: url=https://pkg.jenkins.io/debian/jenkins.io-2023.key state=present
+
+- name: Ensure the repository is configured
+  apt_repository:
+    repo: 'deb https://pkg.jenkins.io/debian-stable binary/' 
+    state: present
+
+
+- name: Install Jenkins
+  apt:
+    name: jenkins
+    state: present
+
+- name: Start and enable Jenkins service
+  systemd:
+    name: jenkins
+    state: started
+    enabled: yes
+
+- name: Retrieve Jenkins initial admin password
+  shell: cat /var/lib/jenkins/secrets/initialAdminPassword
+  register: jenkins_admin_password
+
+
+- name: Display Jenkins initial admin password
+  debug:
+    msg: "Jenkins initial admin password is {{ jenkins_admin_password.stdout }}"
