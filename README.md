@@ -51,7 +51,7 @@
 
 ### Next we use Ansible roles to configura each of our tools ! 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/bf08a153-1bdb-4ff5-b16d-3b21266bfe8e)
-
+```
 ├── Docker_role
 │   ├── defaults
 │   │   └── main.yml
@@ -133,7 +133,7 @@
     │   └── test.yml
     └── vars
         └── main.yml
-
+```
 
 ### Finally , The playbook where wecall upon all the roles! 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/6e8a82ff-866c-49dc-bb77-943eb569c640)
