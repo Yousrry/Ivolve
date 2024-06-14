@@ -6,8 +6,8 @@ resource "aws_sns_topic" "email_topic" {
 # Subscribe Gmail address to the SNS topic
 resource "aws_sns_topic_subscription" "email_subscription" {
   topic_arn = aws_sns_topic.email_topic.arn
-  protocol  = "email"
-  endpoint  = "Mohammed.yousry510@gmail.com" 
+  protocol  = var.protocol 
+  endpoint  = var.email  
 }
 
 resource "aws_cloudwatch_metric_alarm" "alarm" {
@@ -24,7 +24,7 @@ resource "aws_cloudwatch_metric_alarm" "alarm" {
   alarm_actions = [aws_sns_topic.email_topic.arn]
 
   dimensions = {
-    InstanceId = aws_instance.ec2.id
+    InstanceId = var.instance_id
    }
   
 }

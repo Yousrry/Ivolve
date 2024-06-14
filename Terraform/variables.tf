@@ -68,4 +68,18 @@ variable "ami" {
  default = "ami-04b70fa74e45c3917"  #Canonical, Ubuntu, 24.04 LTS, amd64
 
 }
+variable "protocol" {
+
+ type = string 
+ default = "email"
+
+}
+
+variable "email" {
+
+ type = string 
+ default = "Mohammed.yousry510@gmail.com"
+}
+
+
 

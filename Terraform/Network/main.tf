@@ -1,5 +1,7 @@
 resource "aws_vpc" "vpc" {
   cidr_block = "10.0.0.0/16"
+  enable_dns_support = true
+  enable_dns_hostnames = true
   tags = { 
     Name = var.vpc_name 
   }
@@ -14,6 +16,7 @@ resource "aws_subnet" "subnet" {
 }
 resource "aws_security_group" "Ivolve-sg" {
   # Allowing ssh , sonarqube , jenkins ,and my app 
+  vpc_id     = aws_vpc.vpc.id
   ingress {
     from_port   = 9000
     to_port     = 9000

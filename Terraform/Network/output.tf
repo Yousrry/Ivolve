@@ -3,6 +3,6 @@ output "subnet_public_id" {
    
 }
 output "sg_id" {
-  value = aws_subnet.Ivolve-sg.id
+  value = aws_security_group.Ivolve-sg.id
    
 }
