@@ -18,7 +18,7 @@
 ### We should always provision our resources as a first step of any project and we do that by using terraform, I have used modules and variables to make the scripts as clean and reuseable as possible ! 
 ![Screenshot from 2024-06-14 10-27-46](https://github.com/Yousrry/Ivolve/assets/172133196/45686d2c-9bad-4a43-9bf0-29f26862fe56)
 ![Screenshot from 2024-06-14 10-28-00](https://github.com/Yousrry/Ivolve/assets/172133196/adfb2968-67e3-4f71-a01a-dc9ac35278e5)
-### and after the first apply we un comment the following backend section to enable remoote backend and re-apply
+### and after the first apply we un-comment the following backend section to enable remote backend and re-apply
 
 ![Screenshot from 2024-06-14 10-31-36](https://github.com/Yousrry/Ivolve/assets/172133196/dfd27c11-d65e-4da2-b6f8-cf2d11d7a747)
 
