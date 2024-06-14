@@ -33,7 +33,7 @@
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/ce40e5e9-d6aa-46ed-a61d-67da1392e7ea)
 
 ## key points to note while using terraform 
-### - when provisioning the EC2 make sure to give it enough space (atleast 20 GB),and give it the pre-made key name yo be able to access it later !
+### - when provisioning the EC2 make sure to give it enough space (atleast 20 GB),and give it the pre-made key name to be able to access it later !
 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/c0c68d84-c926-47ee-8123-2183b84fef37)
 ### - when provisioning the VPC make sure to enable DNS as later we will use Ansible dynamic inventory which requires puplic DNS
@@ -42,7 +42,7 @@
 
 ## Next stop is Ansible ! 
 ### after provisioning resources we need to configure them ,and that's why we need Ansible ! 
-### we need to install and  the plugin called aws_ec2 which helps in in creating Dynamic inventory for EC2 instances 
+### we need to install the plugin called aws_ec2 which helps in in creating Dynamic inventory for EC2 instances 
 # (inventory)
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/ff01627a-b8a8-4484-aa7e-04b772d5eba2)
 # (ansible.cfg) 
