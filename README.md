@@ -52,6 +52,89 @@
 ### Next we use Ansible roles to configura each of our tools ! 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/bf08a153-1bdb-4ff5-b16d-3b21266bfe8e)
 
+├── Docker_role
+│   ├── defaults
+│   │   └── main.yml
+│   ├── handlers
+│   │   └── main.yml
+│   ├── meta
+│   │   └── main.yml
+│   ├── README.md
+│   ├── tasks
+│   │   └── main.yml
+│   ├── tests
+│   │   ├── inventory
+│   │   └── test.yml
+│   └── vars
+│       └── main.yml
+├── jenkins_role
+│   ├── defaults
+│   │   └── main.yml
+│   ├── handlers
+│   │   └── main.yml
+│   ├── meta
+│   │   └── main.yml
+│   ├── README.md
+│   ├── tasks
+│   │   └── main.yml
+│   ├── tests
+│   │   ├── inventory
+│   │   └── test.yml
+│   └── vars
+│       └── main.yml
+├── OC-role
+│   ├── defaults
+│   │   └── main.yml
+│   ├── handlers
+│   │   └── main.yml
+│   ├── meta
+│   │   └── main.yml
+│   ├── README.md
+│   ├── tasks
+│   │   └── main.yml
+│   ├── tests
+│   │   ├── inventory
+│   │   └── test.yml
+│   └── vars
+│       └── main.yml
+├── postgresql
+│   ├── defaults
+│   │   └── main.yml
+│   ├── files
+│   ├── handlers
+│   │   └── main.yml
+│   ├── meta
+│   │   └── main.yml
+│   ├── README.md
+│   ├── tasks
+│   │   └── main.yml
+│   ├── templates
+│   ├── tests
+│   │   ├── inventory
+│   │   └── test.yml
+│   └── vars
+│       └── main.yml
+└── SonarQube-role
+    ├── defaults
+    │   └── main.yml
+    ├── files
+    │   └── sonarqube.service
+    ├── handlers
+    │   └── main.yml
+    ├── meta
+    │   └── main.yml
+    ├── README.md
+    ├── tasks
+    │   └── main.yml
+    ├── templates
+    │   └── sonar.properties.j2
+    ├── tests
+    │   ├── inventory
+    │   └── test.yml
+    └── vars
+        └── main.yml
+
+
 ### Finally , The playbook where wecall upon all the roles! 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/6e8a82ff-866c-49dc-bb77-943eb569c640)
 
@@ -69,6 +152,9 @@
 
 ### We then create a project and a token !  those will be used later when integrating with jenkins.
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/eb042fe9-7b43-4715-9e21-91dffab83844)
+### We need to change build.gradle file and add sonarqube plugin 
+![image](https://github.com/Yousrry/Ivolve/assets/172133196/9064c9a8-a531-485d-81c7-1ac7cfdab304)
+
 
 ### after the pipeline is successful we see our code review 
 
