@@ -177,6 +177,8 @@
 ## Finally we're ready for jenkins ! 
 ### jenkins was installed and configured with ansible , and ansible gave us the initial password as seen 
 ![Screenshot from 2024-06-14 11-04-39](https://github.com/Yousrry/Ivolve/assets/172133196/72942dd6-6fbd-41f0-912a-b43393813e1d)
+![image](https://github.com/Yousrry/Ivolve/assets/172133196/271d3b9b-7d76-4015-b4b8-efb347001c1e)
+
 ### we login to jenkins and install the required plugins Called Sonarqube scanner 
 ### we then set up credentials ! 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/56763d98-9683-4fe2-9ef3-1db4f5dfb6d0)
