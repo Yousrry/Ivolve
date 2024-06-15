@@ -1,4 +1,5 @@
-# This is a comprehensive over view on how to create a pipeline with Jenkins while using SonarQube for code Analysis, Docker for image build and push , and Openshift to deploy our app .
+# This is a comprehensive overview on how to create a pipeline with Jenkins while using SonarQube for code Analysis, Docker for image build and push , and Openshift to deploy our app .
+![image](https://github.com/Yousrry/Ivolve/assets/172133196/a2c6afb8-e687-4041-8e1b-2e1d8fc30d5f)
 
 ## Project Architecture
 
@@ -26,6 +27,9 @@
 ### we then check  AWS console to ensure resources provisioned correctly 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/0ebebf91-64ed-4954-811b-c7d0a186f2d4)
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/3873731c-2a19-42e8-89cc-fab2dee92748)
+### We check our mointoring Module 
+![image](https://github.com/Yousrry/Ivolve/assets/172133196/8ac7fe57-0064-4bd7-b4b7-cdc7eeaeb962)
+
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/6bdae481-a898-45ed-bd5f-fb8935a97c92)
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/3df75227-5bb1-4e52-a8ce-3a319fb2d6f0)
 ### also note thet the resources for remote backend has been provisioned with server side encryption and versioning enabled on the s3 ! 
@@ -135,7 +139,7 @@
         └── main.yml
 ```
 
-### Finally , The playbook where wecall upon all the roles! 
+### Finally , The playbook where we call upon all the roles! 
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/6e8a82ff-866c-49dc-bb77-943eb569c640)
 
 ### We run the playbook and wait for the confirmation that all tasks were made !
