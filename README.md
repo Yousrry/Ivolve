@@ -205,7 +205,7 @@
 ![image](https://github.com/Yousrry/Ivolve/assets/172133196/af632d00-7a2a-4e32-b3ea-f88e8e49b66e)
 
 
-### accessing the app 
+### accessing the app (I logged into the OC cluster from my main pc)
 ![Screenshot from 2024-06-14 12-42-19](https://github.com/Yousrry/Ivolve/assets/172133196/2d6acd67-ffdd-4c5d-8b21-86a099ff04e8)
 ![Screenshot from 2024-06-14 12-46-22](https://github.com/Yousrry/Ivolve/assets/172133196/3a3dc959-802d-4056-99bf-8e31bbb88f86)
 
